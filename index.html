@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager with API Integration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Task Manager with API Integration</h1>
+
+  <!-- ========== TASK 1: Async JavaScript Practice ========== -->
+  <section class="card">
+    <h2>Task 1: Async JavaScript Practice</h2>
+    <p class="hint">Click a button and watch the output below (also check the browser console).</p>
+
+    <div class="button-row">
+      <button id="btn-order">Execution Order</button>
+      <button id="btn-timeout">setTimeout (3s)</button>
+      <button id="btn-interval">Countdown (setInterval)</button>
+      <button id="btn-callback">Callback</button>
+      <button id="btn-promise">Promise</button>
+      <button id="btn-async">Async/Await</button>
+      <button id="btn-clear" class="secondary">Clear</button>
+    </div>
+
+    <div id="async-output" class="output-box"></div>
+  </section>
+
+  <!-- ========== TASK 2: My Own Todo App ========== -->
+  <section class="card">
+    <h2>Task 2: My Todo App</h2>
+
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Write a new task..." />
+      <button type="submit">Add Task</button>
+    </form>
+    <p id="todo-error" class="error"></p>
+
+    <p class="counts">
+      Total: <strong id="count-total">0</strong> |
+      Completed: <strong id="count-completed">0</strong> |
+      Pending: <strong id="count-pending">0</strong>
+    </p>
+
+    <ul id="todo-list" class="list"></ul>
+  </section>
+
+  <!-- ========== TASK 3 & 4: API Todos ========== -->
+  <section class="card">
+    <h2>Task 3 &amp; 4: Todos from API</h2>
+
+    <div class="button-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+      <button class="filter-btn" data-filter="pending">Pending</button>
+      <button id="refresh-btn" class="secondary">Refresh</button>
+    </div>
+
+    <input type="text" id="search-input" placeholder="Search todos by title..." />
+
+    <p id="api-status" class="status"></p>
+    <p id="api-count" class="counts"></p>
+
+    <ul id="api-list" class="list scroll"></ul>
+  </section>
+
+  <script src="js/async-practice.js"></script>
+  <script src="js/todo-app.js"></script>
+  <script src="js/api-todos.js"></script>
+</body>
+</html>

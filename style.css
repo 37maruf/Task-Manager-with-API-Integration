@@ -1,0 +1,98 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  margin: 0;
+  padding: 20px;
+  color: #222;
+}
+
+h1 { text-align: center; }
+
+.card {
+  background: white;
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hint { color: #666; font-size: 14px; }
+
+button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover { background: #2563eb; }
+button.secondary { background: #6b7280; }
+button.secondary:hover { background: #4b5563; }
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+#todo-form { display: flex; gap: 8px; }
+#todo-form input { margin-bottom: 0; }
+
+.output-box {
+  background: #111827;
+  color: #86efac;
+  padding: 10px;
+  border-radius: 6px;
+  min-height: 80px;
+  max-height: 220px;
+  overflow-y: auto;
+  font-family: monospace;
+}
+.output-box p { margin: 4px 0; }
+
+.counts { font-size: 14px; }
+.error { color: #dc2626; min-height: 18px; margin: 6px 0; }
+.status { color: #2563eb; font-weight: bold; }
+.status.error { color: #dc2626; }
+
+.list { list-style: none; padding: 0; margin: 0; }
+.list.scroll { max-height: 350px; overflow-y: auto; }
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.list li span.title { flex: 1; }
+
+.completed .title { text-decoration: line-through; color: #888; }
+
+.badge {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  color: white;
+}
+.badge.done { background: #16a34a; }
+.badge.pending { background: #f59e0b; }
+
+.delete-btn { background: #dc2626; padding: 4px 10px; }
+.delete-btn:hover { background: #b91c1c; }
+
+.filter-btn { background: #9ca3af; }
+.filter-btn.active { background: #3b82f6; }
